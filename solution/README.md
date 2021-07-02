@@ -9,8 +9,8 @@
     9  docker run -d -v /root/csvserver/inputFile:/csvserver/inputdata:rw infracloudio/csvserver:latest
    10  docker ps
    11  docker exec -it 63bc7e08b3fd /bin/bash
-   12  :latest
-   13  docker run -d -p 9393:9300 -e "CSVSERVER_BORDER=Orange" --rm -v /root/csvserver/inputFile:/csvserver/inputdata:rw infracloudio/csvserver:latest
+   12  pwd='/root/csvserver'
+   13  docker run -d -p 9393:9300 -e "CSVSERVER_BORDER=Orange" --rm -v $pwd/inputFile:/csvserver/inputdata:rw infracloudio/csvserver:latest
    14  docker ps
    15  mkdir solution
    16  cd solution/
